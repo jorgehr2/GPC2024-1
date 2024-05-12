@@ -1,10 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using Long = long long;
-
-#define debug(x) cout << #x << " = " << x << endl
-
 int main() {
     // Stack
     stack<int> s;

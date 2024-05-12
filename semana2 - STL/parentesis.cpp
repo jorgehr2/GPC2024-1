@@ -1,28 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-using Long = long long;
-
-#define debug(x) cout << #x << " = " << x << endl
-
 int main() {
     stack<char> s;
     string parentesis;
     cin >> parentesis;
 
+    // i
+    // (()()()))
+    // s = (
+
+    // string texto = "hola como estas";
+    // char character = 'c';
+
     for (char c : parentesis) {
-        if (c == '(' || s.empty()) {
-            s.push(c);
+        if (c == '(') {
+            s.push('(');
         } else { // c == ')'
-            if (s.top() == '(') {
+            if (!s.empty() && s.top() == '(') {
                 s.pop();
             } else {
-                s.push(c);
+                s.push(')');
             }
         }
     }
 
-    cout << (s.empty() ? "Balanceada" : "Desbalanceada");
+    if (s.empty()) {
+        cout << "Balanceada";
+    } else {
+        cout << "Desbalanceada";
+    }
 
     return 0;
 }
