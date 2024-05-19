@@ -16,6 +16,5 @@ int main() {
         s.pop();
     }
     // cout : 7 6 5 4 3
-
     return 0;
 }
