@@ -8,6 +8,7 @@ const double PI = 3.14;
 
 vector<int> vec;
 int arr[100000 + 2];
+
 int main() {
     cin >> a;
     if (a == 20) {
